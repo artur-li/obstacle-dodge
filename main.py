@@ -23,11 +23,11 @@ class Player(pygame.sprite.Sprite):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT] and self.rect.centerx >= 25:
             self.rect.centerx -= 5
-        elif keys[pygame.K_RIGHT] and self.rect.centerx <= 475:
+        if keys[pygame.K_RIGHT] and self.rect.centerx <= 475:
             self.rect.centerx += 5
-        elif keys[pygame.K_UP] and self.rect.centery >= 25:
+        if keys[pygame.K_UP] and self.rect.centery >= 25:
             self.rect.centery -= 5
-        elif keys[pygame.K_DOWN] and self.rect.centery <= 675:
+        if keys[pygame.K_DOWN] and self.rect.centery <= 675:
             self.rect.centery += 5
     def collision(self):
         global game_state
